@@ -1269,8 +1269,6 @@ form .btn[disabled] {
   .feat-item {
     padding: 16px 0 16px 14px;
   }
-    padding: 76px var(--edge);
-  }
   .cta-card {
     grid-template-columns: 1fr;
     gap: 24px;
