@@ -650,6 +650,15 @@ ol, ul {
   margin-bottom: 52px;
 }
 
+.head--center {
+  text-align: center;
+}
+
+.head--center .h2 {
+  max-width: 22ch;
+  margin: 10px auto 0;
+}
+
 .head__row {
   margin-top: 18px;
   display: grid;
