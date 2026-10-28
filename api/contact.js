@@ -10,7 +10,7 @@ export default async function handler(req, res) {
   <tr><td><strong>Email</strong></td><td>${email}</td></tr>
   <tr><td><strong>Phone</strong></td><td>${phone || '—'}</td></tr>
   <tr><td><strong>Organisation</strong></td><td>${org}</td></tr>
-  <tr><td><strong>Type</strong></td><td>${orgType}</td></tr>
+  <tr><td><strong>Type</strong></td><td>${orgType.replace(/&amp;/g, '&')}</td></tr>
   <tr><td><strong>Learners</strong></td><td>${size || '—'}</td></tr>
   <tr><td><strong>Message</strong></td><td style="white-space:pre-wrap">${message || '—'}</td></tr>
 </table>`;

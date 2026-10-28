@@ -1019,6 +1019,10 @@ form {
   gap: 16px;
 }
 
+form[hidden] {
+  display: none;
+}
+
 .row {
   display: grid;
   grid-template-columns: 1fr 1fr;
