@@ -781,7 +781,7 @@ ol, ul {
   display: grid;
   grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   gap: 48px;
-  align-items: start;
+  align-items: center;
 }
 
 .feat-list {
@@ -831,6 +831,7 @@ ol, ul {
 
 .feat-item__title {
   display: block;
+  font-family: var(--font-hero);
   font-size: clamp(1rem, 0.85rem + 0.5vw, 1.25rem);
   font-weight: 500;
   line-height: 1.25;
