@@ -253,38 +253,23 @@
   }
 
   /* ------------------------------------------------------------
-     Features: accordion + stage, auto-advancing
+     Platform: accordion list + stage image sync
   ------------------------------------------------------------ */
-  const feats = $("#features");
-  if (feats) {
-    const items = $$(".feat", feats), imgs = $$("#stage img");
-    const DUR = 7000;
-    feats.style.setProperty("--dur", DUR + "ms");
-    if (reduce) feats.classList.add("is-static");
-
-    const go = (i) => {
-      items.forEach((it, k) => {
-        const on = k === i;
-        it.classList.toggle("is-active", on);
-        $(".feat__btn", it).setAttribute("aria-expanded", String(on));
-        if (imgs[k]) imgs[k].classList.toggle("is-active", on);
+  const featItems = $$("#features .feat-item");
+  const stageImgs = $$("#stage img");
+  featItems.forEach((item, i) => {
+    item.addEventListener("click", () => {
+      if (item.classList.contains("is-active")) return;
+      featItems.forEach((it, k) => {
+        it.classList.remove("is-active");
+        it.setAttribute("aria-expanded", "false");
+        if (stageImgs[k]) stageImgs[k].classList.remove("is-active");
       });
-    };
-    items.forEach((it, i) => {
-      $(".feat__btn", it).addEventListener("click", () => {
-        if (!it.classList.contains("is-active")) go(i);
-      });
+      item.classList.add("is-active");
+      item.setAttribute("aria-expanded", "true");
+      if (stageImgs[i]) stageImgs[i].classList.add("is-active");
     });
-    feats.addEventListener("animationend", (e) => {
-      if (!e.target.closest(".feat__bar")) return;
-      const cur = items.findIndex((it) => it.classList.contains("is-active"));
-      go((cur + 1) % items.length);
-    });
-    const list = $(".features__list", feats);
-    list.addEventListener("pointerenter", () => feats.classList.add("is-paused"));
-    list.addEventListener("pointerleave", () => feats.classList.remove("is-paused"));
-    new IntersectionObserver(([e]) => feats.classList.toggle("is-paused", !e.isIntersecting), { threshold: 0.25 }).observe(feats);
-  }
+  });
 
   /* ------------------------------------------------------------
      Contact form

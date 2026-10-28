@@ -760,7 +760,7 @@ ol, ul {
 }
 
 /* ==========================================================
-   PLATFORM / FEATURES — Refined sizes & clean spacing
+   PLATFORM / FEATURES
    ========================================================== */
 .features {
   display: grid;
@@ -769,117 +769,89 @@ ol, ul {
   align-items: start;
 }
 
-.features__list {
-  border-top: 1px solid var(--line);
-}
-
-.feat {
-  position: relative;
-  border-bottom: 1px solid var(--line);
-}
-
-.feat__btn {
-  width: 100%;
+.feat-list {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  flex-direction: column;
+  gap: 0;
+}
+
+.feat-item {
+  position: relative;
+  width: 100%;
   text-align: left;
-  padding: 18px 0;
+  padding: 20px 0 20px 18px;
+  transition: opacity 0.2s var(--ease);
 }
 
-.feat__title {
-  font-size: 16.5px;
-  font-weight: 500;
-  line-height: 1.3;
-  letter-spacing: -0.018em;
-  color: var(--ink-3);
-  transition: color 0.2s var(--ease);
-}
-
-.feat:hover .feat__title {
-  color: var(--ink-2);
-}
-
-.feat.is-active .feat__title {
-  color: var(--title);
-  font-weight: 500;
-}
-
-.feat__btn::after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-radius: var(--radius-sm);
+.feat-item__accent {
+  position: absolute;
+  left: 0;
+  top: 22%;
+  bottom: 22%;
+  width: 2px;
+  border-radius: 99px;
   background: var(--ink);
   opacity: 0;
-  transition: opacity 0.2s var(--ease);
-  flex: none;
+  transition: opacity 0.25s var(--ease);
 }
 
-.feat.is-active .feat__btn::after {
+.feat-item.is-active .feat-item__accent {
   opacity: 1;
 }
 
-.feat__panel {
+.feat-item__num {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+  margin-bottom: 7px;
+  opacity: 0.5;
+  transition: opacity 0.2s var(--ease);
+}
+
+.feat-item.is-active .feat-item__num {
+  opacity: 1;
+}
+
+.feat-item__title {
+  display: block;
+  font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.45rem);
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: -0.022em;
+  color: var(--ink-3);
+  transition: color 0.25s var(--ease);
+}
+
+.feat-item:hover .feat-item__title {
+  color: var(--ink-2);
+}
+
+.feat-item.is-active .feat-item__title {
+  color: var(--ink);
+}
+
+.feat-item__body {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.4s var(--ease);
+  opacity: 0;
+  transition: grid-template-rows 0.35s var(--ease), opacity 0.28s var(--ease);
 }
 
-.feat__panel > div {
+.feat-item__body > p {
   overflow: hidden;
-}
-
-.feat__panel p {
-  padding: 0 20px 18px 0;
   font-size: 13.5px;
-  line-height: 1.55;
+  line-height: 1.58;
   letter-spacing: -0.01em;
   color: var(--ink-2);
-  max-width: 420px;
+  padding-top: 10px;
+  max-width: 38ch;
 }
 
-.feat.is-active .feat__panel {
+.feat-item.is-active .feat-item__body {
   grid-template-rows: 1fr;
-}
-
-.feat__bar {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-.feat__bar i {
-  display: block;
-  height: 100%;
-  background: var(--ink);
-  transform: scaleX(0);
-  transform-origin: left;
-}
-
-.feat.is-active .feat__bar i {
-  animation: fill var(--dur, 7s) linear forwards;
-}
-
-.features.is-paused .feat.is-active .feat__bar i {
-  animation-play-state: paused;
-}
-
-.features.is-static .feat.is-active .feat__bar i {
-  animation: none;
-  transform: scaleX(1);
-}
-
-@keyframes fill {
-  to { transform: scaleX(1); }
-}
-
-.features__cta {
-  padding-top: 28px;
+  opacity: 1;
 }
 
 .features__stage {
@@ -1294,7 +1266,9 @@ form .btn[disabled] {
     position: static;
     order: -1;
   }
-  .cta-card-wrap {
+  .feat-item {
+    padding: 16px 0 16px 14px;
+  }
     padding: 76px var(--edge);
   }
   .cta-card {
@@ -1375,12 +1349,6 @@ form .btn[disabled] {
   .card p {
     font-size: 12px;
     line-height: 1.5;
-  }
-  .feat__btn {
-    padding: 15px 0;
-  }
-  .feat__title {
-    font-size: 15.5px;
   }
   .cta-card-wrap {
     padding: 68px var(--edge);
