@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Osmium AI | AI-Powered Education for Every Institution</title>
+  <meta name="description" content="Osmium AI helps educational organisations deliver personalised learning, intelligent assessments, and AI-driven academic experiences at scale.">
+  <meta name="theme-color" content="#FAF8F4">
+  <link rel="icon" href="assets/img/osmium-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add("js")</script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="#hero" aria-label="Osmium AI home">
+      <img class="nav__logo-light" src="assets/img/osmium34-light.svg" alt="Osmium AI" width="109" height="28">
+      <img class="nav__logo-dark" src="assets/img/osmium34.svg" alt="Osmium AI" width="109" height="28">
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#platform">Platform</a>
+      <a href="#for-institutions">For Institutions</a>
+      <a href="https://www.navchetna.tech/about" target="_blank" rel="noopener">About Us</a>
+    </nav>
+    <div class="nav__right">
+      <a class="nav__cta" href="#contact">Get Osmium</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
+    </div>
+  </div>
+  <!-- mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="#platform">Platform</a>
+    <a href="#for-institutions">For Institutions</a>
+    <a href="https://www.navchetna.tech/about" target="_blank" rel="noopener">About Us</a>
+    <a href="#contact" class="mobile-menu__cta">Get Osmium</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/video/hero-poster.jpg" aria-hidden="true">
+    <source src="assets/video/hero-loop.mp4" type="video/mp4">
+    <source src="assets/video/hero-loop.webm" type="video/webm">
+  </video>
+  <div class="hero__shade"></div>
+  <div class="dotgrid" id="heroGrid" aria-hidden="true"><canvas id="heroDots"></canvas></div>
+
+  <div class="hero__inner">
+    <h1 class="hero__title reveal">AI-powered education, built for <em>every institution</em>.</h1>
+    <p class="hero__lede reveal" style="--d:80ms">Personalised learning, intelligent assessments, and AI-driven academic experiences, adaptive and accessible at scale.</p>
+    <div class="hero__actions reveal" style="--d:160ms">
+      <a class="btn btn--white" href="#contact">Partner with Osmium</a>
+      <a class="btn btn--outline" href="#platform">Explore solutions
+        <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<main id="main">
+
+<!-- ============ TRUSTED ============ -->
+<section class="trusted" aria-label="Trusted by">
+  <p class="label label--center">Trusted by teams building with intent</p>
+  <div class="marquee">
+    <div class="marquee__track">
+      <div class="marquee__group">
+        <img src="assets/img/aws.svg" alt="AWS">
+        <img src="assets/img/homeguru.svg" alt="HomeGuru">
+        <img src="assets/img/aws.svg" alt="AWS">
+        <img src="assets/img/homeguru.svg" alt="HomeGuru">
+        <img src="assets/img/aws.svg" alt="AWS">
+        <img src="assets/img/homeguru.svg" alt="HomeGuru">
+      </div>
+      <div class="marquee__group" aria-hidden="true">
+        <img src="assets/img/aws.svg" alt="AWS">
+        <img src="assets/img/homeguru.svg" alt="HomeGuru">
+        <img src="assets/img/aws.svg" alt="AWS">
+        <img src="assets/img/homeguru.svg" alt="HomeGuru">
+        <img src="assets/img/aws.svg" alt="AWS">
+        <img src="assets/img/homeguru.svg" alt="HomeGuru">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATEMENT ============ -->
+<section class="statement section" aria-labelledby="statement-h">
+  <div class="container container--narrow">
+    <p class="label reveal">About Osmium</p>
+    <h2 class="statement__text" id="statement-h" data-words>
+      Osmium AI helps educational organisations deliver more adaptive, engaging, and accessible learning, from a single classroom to an entire network, at scale.
+    </h2>
+  </div>
+</section>
+
+<!-- ============ AUDIENCES ============ -->
+<section class="section section--tight-top" id="for-institutions">
+  <div class="container">
+    <header class="head">
+      <p class="label reveal">Solutions</p>
+      <div class="head__row">
+        <h2 class="h2 reveal">Empowering education at every level</h2>
+        <p class="head__copy reveal" style="--d:100ms">From classrooms to large educational networks, Osmium AI aims to make personalised, AI-powered learning more accessible to institutions of every size.</p>
+      </div>
+    </header>
+
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card__media"><img src="assets/img/media-k12-v2.webp" alt="Students learning with an educator in a classroom." loading="lazy" width="900" height="900"></div>
+        <div class="card__body">
+          <h3>Schools &amp; K–12 Education</h3>
+          <p>Support students and educators with AI-assisted learning resources, practice assessments, and personalised academic support.</p>
+        </div>
+      </article>
+      <article class="card reveal" style="--d:80ms">
+        <div class="card__media"><img src="assets/img/media-higher-v2.webp" alt="Educators and students working together in a classroom." loading="lazy" width="900" height="900"></div>
+        <div class="card__body">
+          <h3>Higher Education</h3>
+          <p>Enhance the learning experience with intelligent academic assistance, adaptive practice, and tools that support student learning and institutional innovation.</p>
+        </div>
+      </article>
+      <article class="card reveal" style="--d:160ms">
+        <div class="card__media"><img src="assets/img/media-students-v2.webp" alt="Higher education students collaborating in a learning space." loading="lazy" width="900" height="900"></div>
+        <div class="card__body">
+          <h3>Coaching &amp; Test Preparation</h3>
+          <p>Help learners prepare for competitive examinations with AI-assisted mock tests, topic-focused practice, and performance-based learning recommendations.</p>
+        </div>
+      </article>
+      <article class="card reveal" style="--d:240ms">
+        <div class="card__media"><img src="assets/img/media-countries-v2.webp" alt="Two attendees at a professional event." loading="lazy" width="900" height="900"></div>
+        <div class="card__body">
+          <h3>Education Networks &amp; Enterprise</h3>
+          <p>Explore scalable AI learning solutions for educational groups, multi-campus institutions, and organisations seeking to integrate intelligent learning into their existing ecosystem.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLATFORM / FEATURES ============ -->
+<section class="section section--line" id="platform">
+  <div class="container">
+    <header class="head">
+      <p class="label reveal">Platform</p>
+      <div class="head__row">
+        <h2 class="h2 reveal">A smarter way to teach, learn, and assess</h2>
+        <p class="head__copy reveal" style="--d:100ms">AI becomes more valuable when it helps educators and learners turn information into meaningful progress.</p>
+      </div>
+    </header>
+
+    <div class="features" id="features">
+      <ol class="features__list">
+        <li class="feat is-active" data-i="0">
+          <button class="feat__btn" aria-expanded="true">
+            <span class="feat__title">Personalised Learning Experiences</span>
+          </button>
+          <div class="feat__panel"><div>
+            <p>Help learners discover relevant explanations, learning resources, revision materials, and practice activities suited to their learning needs.</p>
+          </div></div>
+          <span class="feat__bar"><i></i></span>
+        </li>
+        <li class="feat" data-i="1">
+          <button class="feat__btn" aria-expanded="false">
+            <span class="feat__title">Intelligent Assessment &amp; Practice</span>
+          </button>
+          <div class="feat__panel"><div>
+            <p>Generate AI-assisted practice tests and question sets to help learners evaluate their understanding and identify areas for improvement.</p>
+          </div></div>
+          <span class="feat__bar"><i></i></span>
+        </li>
+        <li class="feat" data-i="2">
+          <button class="feat__btn" aria-expanded="false">
+            <span class="feat__title">Performance Insights</span>
+          </button>
+          <div class="feat__panel"><div>
+            <p>Use learning and assessment data, where supported, to identify knowledge gaps and guide more focused academic practice.</p>
+          </div></div>
+          <span class="feat__bar"><i></i></span>
+        </li>
+        <li class="feat" data-i="3">
+          <button class="feat__btn" aria-expanded="false">
+            <span class="feat__title">AI-Powered Academic Assistance</span>
+          </button>
+          <div class="feat__panel"><div>
+            <p>Give learners an additional way to explore concepts, ask questions, and engage with educational material.</p>
+          </div></div>
+          <span class="feat__bar"><i></i></span>
+        </li>
+        <li class="feat" data-i="4">
+          <button class="feat__btn" aria-expanded="false">
+            <span class="feat__title">Institution-Centred Learning</span>
+          </button>
+          <div class="feat__panel"><div>
+            <p>Explore how Osmium can fit your institution's teaching workflows, learning requirements, and educational objectives.</p>
+          </div></div>
+          <span class="feat__bar"><i></i></span>
+        </li>
+        <li class="feat" data-i="5">
+          <button class="feat__btn" aria-expanded="false">
+            <span class="feat__title">Designed to Grow With Your Institution</span>
+          </button>
+          <div class="feat__panel"><div>
+            <p>Discuss deployment options, integration requirements, and potential customisation based on your organisation's needs.</p>
+          </div></div>
+          <span class="feat__bar"><i></i></span>
+        </li>
+        <li class="features__cta">
+          <a class="btn btn--ink" href="#contact">
+            Discover Osmium for your institution
+          </a>
+        </li>
+      </ol>
+
+      <div class="features__stage">
+        <div class="stage" id="stage">
+          <img class="is-active" src="assets/img/personalised-learning.webp" alt="Personalised learning interface." loading="lazy" width="1400" height="788">
+          <img src="assets/img/intelligent-assessment.webp" alt="AI assessment interface." loading="lazy" width="1400" height="788">
+          <img src="assets/img/performance-insights.webp" alt="Performance insights dashboard." loading="lazy" width="1600" height="901">
+          <img src="assets/img/ai-academic-assistance.webp" alt="AI academic assistance interface." loading="lazy" width="1400" height="788">
+          <img src="assets/img/institution-centred.webp" alt="Institution learning dashboard." loading="lazy" width="1400" height="788">
+          <img src="assets/img/designed-to-grow.webp" alt="Scalable platform interface." loading="lazy" width="1400" height="788">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA CARD ============ -->
+<section class="cta-card-wrap" aria-labelledby="cta-card-h">
+  <div class="cta-card reveal">
+    <div class="cta-card__left">
+      <p class="label">Get started</p>
+      <h2 class="cta-card__title" id="cta-card-h">One platform.<br><em>More possibilities</em><br>for education.</h2>
+    </div>
+    <div class="cta-card__right">
+      <p class="cta-card__copy">Bring AI-powered learning into your educational ecosystem. Whether you lead a school, university, coaching institute, or education network, Osmium AI can help you explore new approaches to learning and assessment.</p>
+      <div class="cta-card__actions">
+        <a class="btn btn--ink" href="#contact">Get Osmium for your institution</a>
+        <a class="btn btn--ghost" href="#platform">Explore the platform</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section" id="contact">
+  <div class="container contact">
+    <div class="contact__copy">
+      <p class="label reveal">Enterprise enquiry</p>
+      <h2 class="h2 reveal" style="--d:80ms">Let's build the future of learning together.</h2>
+      <p class="contact__lede reveal" style="--d:160ms">Tell us about your organisation and what you're looking to achieve. Our team will connect with you to discuss enterprise solutions, implementation, and next steps.</p>
+    </div>
+
+    <div class="contact__card reveal" style="--d:120ms">
+      <form id="contactForm" novalidate data-endpoint="/api/contact">
+        <div class="row">
+          <label class="field"><span>Full name</span><input name="name" type="text" placeholder="Jane Smith" autocomplete="name" required></label>
+          <label class="field"><span>Work email</span><input name="email" type="email" placeholder="jane@institution.edu" autocomplete="email" required></label>
+        </div>
+        <div class="row">
+          <label class="field"><span>Phone number</span><input name="phone" type="tel" placeholder="+91 00000 00000" autocomplete="tel"></label>
+          <label class="field"><span>Organisation name</span><input name="org" type="text" placeholder="Your institution" autocomplete="organization" required></label>
+        </div>
+        <label class="field"><span>Organisation type</span>
+          <select name="orgType" required>
+            <option value="">Select type</option>
+            <option>K–12 School / School Group</option>
+            <option>Higher Education Institution</option>
+            <option>Coaching &amp; Test Preparation</option>
+            <option>Education Network / Multi-Campus</option>
+            <option>Government / Public Sector</option>
+            <option>EdTech Company</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label class="field"><span>Number of learners</span>
+          <select name="size">
+            <option value="">Select range</option>
+            <option>1–100</option><option>101–500</option><option>501–2,000</option><option>2,001–10,000</option><option>10,000+</option>
+          </select>
+        </label>
+        <label class="field"><span>Tell us about your requirements</span>
+          <textarea name="message" rows="4" placeholder="Describe your institution's goals, current challenges, and what you're looking to achieve with Osmium AI..."></textarea>
+        </label>
+        <p class="form__error" id="formError" role="alert" hidden></p>
+        <button class="btn btn--ink" type="submit" id="formSubmit">Submit enterprise enquiry</button>
+        <p class="form__legal">By submitting, you agree to be contacted regarding your enquiry. See our <a href="https://www.navchetna.tech/privacy" target="_blank" rel="noopener">Privacy Policy</a> for details.</p>
+      </form>
+
+      <div class="form__done" id="formDone" hidden>
+        <span class="form__check"><svg width="22" height="22" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>Enquiry received</h3>
+        <p>Thank you. Our team will be in touch within 1–2 business days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="#hero" aria-label="Osmium AI home"><img src="assets/img/osmium34.svg" alt="Osmium AI" width="109" height="28"></a>
+        <p>Intelligent learning. Personalised possibilities. AI-powered educational experiences for institutions, educators, and learners.</p>
+      </div>
+      <nav class="footer__col" aria-label="Platform">
+        <h4>Platform</h4>
+        <a href="#platform">Platform</a>
+        <a href="#for-institutions">For Institutions</a>
+        <a href="#contact">Pricing</a>
+      </nav>
+      <nav class="footer__col" aria-label="Organisation">
+        <h4>Organisation</h4>
+        <a href="https://www.navchetna.tech/about" target="_blank" rel="noopener">About Us</a>
+        <a href="#contact">Contact Us</a>
+        <a href="https://navchetna.tech/" target="_blank" rel="noopener">Navchetna Technologies</a>
+      </nav>
+      <nav class="footer__col" aria-label="Legal">
+        <h4>Legal</h4>
+        <a href="https://www.navchetna.tech/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+        <a href="https://www.navchetna.tech/terms" target="_blank" rel="noopener">Terms of Service</a>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Osmium AI. All rights reserved. Powered by Navchetna Technologies.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
