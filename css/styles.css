@@ -632,8 +632,8 @@ ol, ul {
   left: 50%;
   transform: translateX(-50%);
   width: min(var(--container), calc(100% - var(--edge) * 2));
-  height: 1px;
-  background: var(--line);
+  height: 0;
+  border-top: 1.5px dotted var(--line-2);
 }
 
 .head {
@@ -766,12 +766,12 @@ ol, ul {
 }
 
 .features__list {
-  border-top: 1px solid var(--line);
+  border-top: 1.5px dotted var(--line-2);
 }
 
 .feat {
   position: relative;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1.5px dotted var(--line-2);
 }
 
 .feat__btn {
