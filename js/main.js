@@ -184,7 +184,7 @@
 
     if (reduce) {
       words.forEach((w) => {
-        w.style.color = "var(--ink)";
+        w.style.color = "#121212";
         w.classList.add("on");
       });
     } else {
@@ -216,15 +216,15 @@
 
           // Smoothly interpolate color from muted light gray to deep ink
           if (localP <= 0) {
-            w.style.color = "rgba(17, 17, 17, 0.18)";
+            w.style.color = "rgba(18, 18, 18, 0.2)";
             w.classList.remove("on");
           } else if (localP >= 1) {
-            w.style.color = "var(--ink)";
+            w.style.color = "#121212";
             w.classList.add("on");
           } else {
-            // Eased transition between muted (0.18) and solid ink (1.0)
-            const alpha = 0.18 + 0.82 * Math.sin((localP * Math.PI) / 2);
-            w.style.color = `rgba(17, 17, 17, ${alpha.toFixed(3)})`;
+            // Eased transition between muted (0.2) and solid #121212 (1.0)
+            const alpha = 0.2 + 0.8 * Math.sin((localP * Math.PI) / 2);
+            w.style.color = `rgba(18, 18, 18, ${alpha.toFixed(3)})`;
             w.classList.toggle("on", localP > 0.65);
           }
         });
