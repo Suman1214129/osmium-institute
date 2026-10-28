@@ -1153,7 +1153,7 @@ form .btn[disabled] {
   position: relative;
   /* The whole footer sits on the background image */
   background:
-    url('assets/img/Minimalist Indian Street Procession footer background.png')
+    url('../assets/img/Minimalist%20Indian%20Street%20Procession%20footer%20background.png')
     bottom center / cover no-repeat;
 }
 
