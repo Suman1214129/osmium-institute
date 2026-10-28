@@ -1276,7 +1276,7 @@ form .btn[disabled] {
     display: none;
   }
   .feat-item {
-    padding: 10px 0 10px 14px;
+    padding: 6px 0 6px 14px;
   }
   .feat-item__img {
     display: block;
