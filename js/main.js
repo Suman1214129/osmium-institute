@@ -323,36 +323,17 @@
       const label = btn.textContent;
       btn.textContent = "Sending...";
       try {
-        const data = Object.fromEntries(new FormData(form));
-        const html = `
-<h2>New Enterprise Enquiry — Osmium AI</h2>
-<table cellpadding="6" style="border-collapse:collapse;font-family:sans-serif;font-size:14px">
-  <tr><td><strong>Name</strong></td><td>${data.name}</td></tr>
-  <tr><td><strong>Email</strong></td><td>${data.email}</td></tr>
-  <tr><td><strong>Phone</strong></td><td>${data.phone || '—'}</td></tr>
-  <tr><td><strong>Organisation</strong></td><td>${data.org}</td></tr>
-  <tr><td><strong>Type</strong></td><td>${data.orgType}</td></tr>
-  <tr><td><strong>Learners</strong></td><td>${data.size || '—'}</td></tr>
-  <tr><td><strong>Message</strong></td><td style="white-space:pre-wrap">${data.message || '—'}</td></tr>
-</table>`;
-        const res = await fetch("https://mailer.navchetna.tech/send", {
+        const res = await fetch("/api/contact", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "x-api-key": "aegis_mk_live_e3ec02cc27a0a3a5d53be51fa12148bc20897ed1ca1c3834aeb22feb473b1d76"
-          },
-          body: JSON.stringify({
-            to: "hello@navchetna.tech",
-            replyTo: data.email,
-            subject: `Osmium Enquiry: ${data.org} (${data.orgType})`,
-            html
-          })
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(Object.fromEntries(new FormData(form)))
         });
         const json = await res.json();
         if (!res.ok || !json.success) throw new Error(json.error || res.status);
         form.hidden = true;
         done.hidden = false;
-      } catch {
+      } catch (err) {
+        console.error("Contact form error:", err);
         showError("Something went wrong. Please try again or", true);
         btn.disabled = false;
         btn.textContent = label;
