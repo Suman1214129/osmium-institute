@@ -355,10 +355,20 @@ ol, ul {
   position: relative;
   flex-shrink: 0;
   border-radius: var(--radius);
-  transition: background 0.18s;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.18s, border-color 0.18s;
 }
 .nav__toggle:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.18);
+}
+.nav.is-solid .nav__toggle {
+  background: transparent;
+  border-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 .nav.is-solid .nav__toggle:hover {
   background: rgba(17, 17, 17, 0.06);
