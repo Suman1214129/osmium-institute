@@ -1,5 +1,5 @@
-﻿/* ==========================================================
-   Osmium AI â€” Redesign
+/* ==========================================================
+   Osmium AI — Redesign
    Fonts: Raleway (Hero Title) | Manrope (Everywhere else)
    Aesthetic: shadcn / modern tech refined proportions
    ========================================================== */
@@ -126,7 +126,7 @@ ol, ul {
 }
 
 /* ==========================================================
-   TYPOGRAPHY â€” Compact, high-polish modern scale
+   TYPOGRAPHY — Compact, high-polish modern scale
    ========================================================== */
 .label {
   font-family: var(--font);
@@ -157,7 +157,7 @@ ol, ul {
 }
 
 /* ==========================================================
-   BUTTONS â€” Manrope everywhere, shadcn squared 6px radius
+   BUTTONS — Manrope everywhere, shadcn squared 6px radius
    ========================================================== */
 .btn {
   font-family: var(--font);
@@ -224,7 +224,7 @@ ol, ul {
 }
 
 /* ==========================================================
-   NAV â€” Light theme on scroll to match website background
+   NAV — Light theme on scroll to match website background
    ========================================================== */
 .nav {
   position: fixed;
@@ -459,7 +459,7 @@ ol, ul {
 }
 
 /* ==========================================================
-   HERO â€” Raleway font in hero title, reduced video blur
+   HERO — Raleway font in hero title, reduced video blur
    ========================================================== */
 .hero {
   position: relative;
@@ -524,7 +524,7 @@ ol, ul {
   max-width: 840px;
 }
 
-/* Raleway for Hero Title â€” Slightly lighter refined weight */
+/* Raleway for Hero Title — Slightly lighter refined weight */
 .hero__title {
   font-family: var(--font-hero);
   font-weight: 500;
@@ -567,7 +567,7 @@ ol, ul {
 }
 
 /* ==========================================================
-   TRUSTED BY SECTION â€” Seamless Infinite Loop Marquee
+   TRUSTED BY SECTION — Seamless Infinite Loop Marquee
    ========================================================== */
 .trusted {
   padding: 96px 0 52px;
@@ -710,7 +710,7 @@ ol, ul {
 }
 
 /* ==========================================================
-   AUDIENCES / CARDS â€” shadcn squared corners (8px)
+   AUDIENCES / CARDS — shadcn squared corners (8px)
    ========================================================== */
 .cards {
   display: grid;
@@ -906,7 +906,7 @@ ol, ul {
 }
 
 /* ==========================================================
-   CTA CARD â€” shadcn container (10px radius)
+   CTA CARD — shadcn container (10px radius)
    ========================================================== */
 .cta-card-wrap {
   padding: 110px var(--edge);
@@ -962,7 +962,7 @@ ol, ul {
 }
 
 /* ==========================================================
-   CONTACT â€” Clean shadcn forms (inputs: 6px radius)
+   CONTACT — Clean shadcn forms (inputs: 6px radius)
    ========================================================== */
 .contact {
   display: grid;
@@ -1144,7 +1144,7 @@ form .btn[disabled] {
 }
 
 /* ==========================================================
-   FOOTER â€” Ironclad-inspired: content on paper, scenic image base
+   FOOTER — Ironclad-inspired: content on paper, scenic image base
    ========================================================== */
 .footer {
   margin-top: 52px;
@@ -1153,7 +1153,7 @@ form .btn[disabled] {
   position: relative;
   /* The whole footer sits on the background image */
   background:
-    url('assets/img/Minimalist%20Indian%20Street%20Procession%20footer%20background.png')
+    url('../assets/img/Minimalist%20Indian%20Street%20Procession%20footer%20background.png')
     bottom center / cover no-repeat;
 }
 
@@ -1181,8 +1181,6 @@ form .btn[disabled] {
   z-index: 1;
 }
 
-.footer__wave { display: block; line-height: 0; margin-bottom: -2px; }
-.footer__wave svg { display: block; width: 100%; height: 48px; }
 .footer__content {
   padding: 64px 0 0;
 }
@@ -1259,11 +1257,11 @@ form .btn[disabled] {
   text-align: right;
 }
 
-/* Scenic image block â€” shows the background image fully */
+/* Scenic image block — shows the background image fully */
 .footer__scene {
   height: 300px;
   width: 100%;
-  /* transparent â€” the footer background image shows through here */
+  /* transparent — the footer background image shows through here */
   background: transparent;
   display: block;
 }
@@ -1483,9 +1481,7 @@ form .btn[disabled] {
   .footer {
     margin-top: 36px;
   }
-  .footer__wave { display: block; line-height: 0; margin-bottom: -2px; }
-.footer__wave svg { display: block; width: 100%; height: 48px; }
-.footer__content {
+  .footer__content {
     padding: 40px 0 0;
   }
   .footer__grid {
@@ -1520,6 +1516,3 @@ form .btn[disabled] {
   .statement__text .w { opacity: 1; color: var(--ink); }
   .marquee__track { animation: none; }
 }
-
-
-
