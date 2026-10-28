@@ -195,9 +195,9 @@
       const calcTargetProgress = () => {
         const b = st.getBoundingClientRect();
         const vh = window.innerHeight;
-        // Starts revealing when text scrolls closer towards middle (62% vh) and finishes as it sits in center (36% vh)
-        const start = vh * 0.62;
-        const end = vh * 0.36;
+        // Starts later (80% vh) and finishes much lower (10% vh) = longer scroll distance
+        const start = vh * 0.80;
+        const end = vh * 0.10;
         const totalDist = start - end;
         return clamp((start - b.top) / totalDist, 0, 1);
       };
@@ -205,7 +205,7 @@
       const renderWords = () => {
         // Damped interpolation for natural human scroll momentum
         const diff = targetProgress - currentProgress;
-        currentProgress += diff * 0.14;
+        currentProgress += diff * 0.08;
 
         const total = words.length;
         const span = 1.4 / total; // overlapping soft window per word
