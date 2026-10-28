@@ -770,20 +770,12 @@ ol, ul {
 }
 
 .features__list {
-  background-image: radial-gradient(circle, rgba(18, 18, 18, 0.3) 1px, transparent 1px);
-  background-size: 10px 2px;
-  background-repeat: repeat-x;
-  background-position: top;
-  border-top: 0;
+  border-top: 1px solid var(--line);
 }
 
 .feat {
   position: relative;
-  background-image: radial-gradient(circle, rgba(18, 18, 18, 0.3) 1px, transparent 1px);
-  background-size: 10px 2px;
-  background-repeat: repeat-x;
-  background-position: bottom;
-  border-bottom: 0;
+  border-bottom: 1px solid var(--line);
 }
 
 .feat__btn {
