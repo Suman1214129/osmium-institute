@@ -265,34 +265,54 @@
 
 <!-- ============ FOOTER ============ -->
 <footer class="footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div class="footer__brand">
-        <a href="#hero" aria-label="Osmium AI home"><img src="assets/img/osmium34.svg" alt="Osmium AI" width="109" height="28"></a>
-        <p>Intelligent learning. Personalised possibilities. AI-powered educational experiences for institutions, educators, and learners.</p>
+  <!-- Content area: logo + nav cols on paper bg -->
+  <div class="footer__content">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Brand -->
+        <div class="footer__brand">
+          <a href="#hero" aria-label="Osmium AI home">
+            <img src="assets/img/osmium34.svg" alt="Osmium AI" width="120" height="30">
+          </a>
+          <p>AI-powered learning experiences for institutions, educators, and learners — personalised at scale.</p>
+        </div>
+
+        <!-- Platform -->
+        <nav class="footer__col" aria-label="Platform">
+          <h4>Platform</h4>
+          <a href="#platform">Platform</a>
+          <a href="#for-institutions">For Institutions</a>
+          <a href="#contact">Pricing</a>
+        </nav>
+
+        <!-- Organisation -->
+        <nav class="footer__col" aria-label="Organisation">
+          <h4>Organisation</h4>
+          <a href="https://www.navchetna.tech/about" target="_blank" rel="noopener">About Us</a>
+          <a href="#contact">Contact Us</a>
+          <a href="https://navchetna.tech/" target="_blank" rel="noopener">Navchetna Technologies</a>
+        </nav>
+
+        <!-- Legal -->
+        <nav class="footer__col" aria-label="Legal">
+          <h4>Legal</h4>
+          <a href="https://www.navchetna.tech/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+          <a href="https://www.navchetna.tech/terms" target="_blank" rel="noopener">Terms of Service</a>
+        </nav>
+
       </div>
-      <nav class="footer__col" aria-label="Platform">
-        <h4>Platform</h4>
-        <a href="#platform">Platform</a>
-        <a href="#for-institutions">For Institutions</a>
-        <a href="#contact">Pricing</a>
-      </nav>
-      <nav class="footer__col" aria-label="Organisation">
-        <h4>Organisation</h4>
-        <a href="https://www.navchetna.tech/about" target="_blank" rel="noopener">About Us</a>
-        <a href="#contact">Contact Us</a>
-        <a href="https://navchetna.tech/" target="_blank" rel="noopener">Navchetna Technologies</a>
-      </nav>
-      <nav class="footer__col" aria-label="Legal">
-        <h4>Legal</h4>
-        <a href="https://www.navchetna.tech/privacy" target="_blank" rel="noopener">Privacy Policy</a>
-        <a href="https://www.navchetna.tech/terms" target="_blank" rel="noopener">Terms of Service</a>
-      </nav>
-    </div>
-    <div class="footer__bottom">
-      <p>© 2026 Osmium AI. All rights reserved. Powered by Navchetna Technologies.</p>
+
+      <!-- Bottom bar -->
+      <div class="footer__bottom">
+        <p>© 2026 Osmium AI. All rights reserved. Powered by Navchetna Technologies.</p>
+        <p class="footer__bottom-right">Built for education, at scale.</p>
+      </div>
     </div>
   </div>
+
+  <!-- Scenic image fills bottom of footer -->
+  <div class="footer__scene" aria-hidden="true"></div>
 </footer>
 
 <script src="js/main.js"></script>

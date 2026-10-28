@@ -877,6 +877,9 @@ ol, ul {
 .features__stage {
   position: sticky;
   top: calc(var(--nav-h) + 20px);
+  padding: 6px;
+  background: rgba(17, 17, 17, 0.05);
+  border-radius: calc(var(--radius-md) + 6px);
 }
 
 .stage {
@@ -886,7 +889,6 @@ ol, ul {
   overflow: hidden;
   background: #FBEFD5;
   border: 1px solid var(--line);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
 .stage img {
@@ -1142,18 +1144,52 @@ form .btn[disabled] {
 }
 
 /* ==========================================================
-   FOOTER
+   FOOTER — Ironclad-inspired: content on paper, scenic image base
    ========================================================== */
 .footer {
-  border-top: 1px solid var(--line);
-  padding-top: 72px;
   margin-top: 52px;
+  border-top: 1px solid var(--line);
+  overflow: hidden;
+  position: relative;
+  /* The whole footer sits on the background image */
+  background:
+    url('assets/img/Minimalist Indian Street Procession footer background.png')
+    bottom center / cover no-repeat;
+}
+
+/* Semi-transparent overlay layer so text is readable over the bg image */
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Fade: solid paper at top (where text lives), transparent at bottom (reveals image) */
+  background: linear-gradient(
+    to bottom,
+    var(--paper) 0%,
+    var(--paper) 60%,
+    rgba(246, 245, 242, 0.72) 76%,
+    rgba(246, 245, 242, 0.1) 90%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* All children sit above the overlay */
+.footer > * {
+  position: relative;
+  z-index: 1;
+}
+
+.footer__content {
+  padding: 64px 0 0;
 }
 
 .footer__grid {
   display: grid;
-  grid-template-columns: 1.6fr repeat(3, 1fr);
+  grid-template-columns: 1.8fr repeat(3, 1fr);
   gap: 40px;
+  align-items: start;
 }
 
 .footer__brand img {
@@ -1162,12 +1198,12 @@ form .btn[disabled] {
 }
 
 .footer__brand p {
-  margin-top: 16px;
-  max-width: 260px;
+  margin-top: 14px;
+  max-width: 240px;
   font-size: 12.5px;
-  line-height: 1.55;
+  line-height: 1.6;
   letter-spacing: -0.01em;
-  color: var(--ink-3);
+  color: var(--ink-2);
 }
 
 .footer__col {
@@ -1200,12 +1236,34 @@ form .btn[disabled] {
   text-underline-offset: 3px;
 }
 
+/* Bottom bar: sits right above the scenic part */
 .footer__bottom {
-  margin-top: 56px;
-  padding: 20px 0 28px;
+  margin-top: 40px;
+  padding: 18px 0 20px;
   border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
   font-size: 11.5px;
   color: var(--ink-3);
+}
+
+.footer__bottom-right {
+  font-size: 11.5px;
+  color: var(--ink-3);
+  font-style: italic;
+  letter-spacing: -0.01em;
+  text-align: right;
+}
+
+/* Scenic image block — shows the background image fully */
+.footer__scene {
+  height: 300px;
+  width: 100%;
+  /* transparent — the footer background image shows through here */
+  background: transparent;
+  display: block;
 }
 
 /* Scroll reveal utility */
@@ -1242,6 +1300,9 @@ form .btn[disabled] {
   }
   .footer__brand {
     grid-column: 1 / -1;
+  }
+  .footer__scene {
+    height: 240px;
   }
 }
 
@@ -1418,15 +1479,29 @@ form .btn[disabled] {
     height: 42px;
   }
   .footer {
-    padding-top: 48px;
     margin-top: 36px;
+  }
+  .footer__content {
+    padding: 40px 0 0;
   }
   .footer__grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 28px;
   }
   .footer__brand {
     grid-column: auto;
+  }
+  .footer__brand p {
+    max-width: 100%;
+  }
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-top: 28px;
+  }
+  .footer__scene {
+    height: 200px;
   }
 }
 
